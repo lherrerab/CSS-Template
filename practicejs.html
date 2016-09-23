@@ -8,9 +8,8 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/practicejs.css">
   <link rel="stylesheet" href="css/style.css">
-  <script type="text/javascript" src="js/practicejs.js"></script>
 </head>
-<body onload="receiveJoke(); document.getElementById('message').style.opacity='1'">
+<body>
   <header class="header">
     <img src="img/logo_desktop.png" alt="banner" class="banner">
   </header>
@@ -21,13 +20,14 @@
         <p>JOKE</p>
         <span id="spanResponse"></span>
       </section><br>
-      <button type="button" name="button" onclick="receiveJoke()">Click Me</button>
-      <button type="button" name="button" onclick="receiveQ()">Search</button>
+      <button type="button" class="btnClick">Click Me</button>
+      <button type="button">Search</button>
     </section>
   </div>
 
   <footer class="footer">
     <span>© All rights reserved</span>
   </footer>
+  <script type="text/javascript" src="js/practicejs.js"></script>
 </body>
 </html>

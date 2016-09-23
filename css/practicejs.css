@@ -4,7 +4,7 @@
 }
 
 .hidden {
-  opacity: 0;
+  opacity: 1;
   margin-top: 25px;
   font-size: 21px;
   text-align: center;

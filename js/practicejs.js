@@ -41,13 +41,18 @@ function sendRequest(conf) {
     });
 }
 
+var responseElement = document.getElementById('spanResponse');
+var btnClick = document.querySelector('.btnClick');
+
+btnClick.addEventListener('click',receiveJoke);
+
 function receiveJoke(){
   sendRequest({url:'http://api.icndb.com/jokes/random'}).then(function(response) {
     jSONResponse =JSON.parse(response);
-    document.getElementById('spanResponse').innerHTML = jSONResponse.value.joke;
+    responseElement.innerHTML = jSONResponse.value.joke;
   },function(error) {
-    document.getElementById('spanResponse').style = "color: red;";
-    document.getElementById('spanResponse').innerHTML = error;
+    responseElement.style = "color: red;";
+    responseElement.innerHTML = error;
   });
 }
 
@@ -59,3 +64,5 @@ function receiveQ(){
     console.error();
   });
 }
+
+receiveJoke();
