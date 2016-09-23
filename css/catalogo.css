@@ -6,13 +6,7 @@ body {
   background-size: cover;
 }
 
-.container2 {
-  height: 100%;
-  font-size: 0;
-}
-
 .content2 {
-  font-size: 14px;
   display: inline-block;
   vertical-align: top;
   height:100%;
@@ -24,7 +18,8 @@ body {
 .box {
   display: inline-block;
   width: 30%;
-  margin: 1em;
+  position: relative;
+  margin: 1%;
 }
 
 .boximg {
@@ -33,13 +28,13 @@ body {
 
 .title {
   color: white;
-  font-size: 30px;
+  font-size: 3vw;
   font-family: fantasy;
 }
 
 .description {
   color: white;
-  font-size: 20px;
+  font-size: 1vw;
   font-family: sans-serif;
   text-align: justify;
   padding: 0 5% 0 5%;
