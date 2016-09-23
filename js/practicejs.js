@@ -50,3 +50,12 @@ function receiveJoke(){
     document.getElementById('spanResponse').innerHTML = error;
   });
 }
+
+function receiveQ(){
+  sendRequest({url:"https://api.github.com/search/repositories?q='JavaScript'"}).then(function(response) {
+    jSONResponse =JSON.parse(response);
+    console.log(response);
+  },function(error) {
+    console.error();
+  });
+}
