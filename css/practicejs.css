@@ -1,5 +1,16 @@
+aside {
+  width: 30% !important;
+  font-size: 1.2vw !important;
+  text-align: justify !important;
+  overflow: scroll;
+}
+
+ul {
+  padding: 0 0 0 2vw;
+}
+
 .section {
-  width: 100% !important;
+  width: 70% !important;
   text-align: center;
 }
 

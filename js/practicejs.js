@@ -1,5 +1,14 @@
+var responseElement = document.getElementById('spanResponse');
+var btnClick = document.querySelector('.btnClick');
+var btnSearch = document.querySelector('.btnSearch');
+var ulResults = document.querySelector('.ulResults');
+var txtSearch = document.querySelector('.txtSearch');
+
+btnClick.addEventListener('click',receiveJoke);
+btnSearch.addEventListener('click',receiveQ);
+
 //XMLHttpRequest to receive the Joke (used previously)
-function receiveMessage(url){
+/*function receiveMessage(url){
   var xmlRequest = new XMLHttpRequest();
   var spanResponse = document.getElementById('spanResponse');
   var xmlResponse;
@@ -16,7 +25,7 @@ function receiveMessage(url){
 
 function writeMessage(){
   var xmlResponse = receiveMessage('http://api.icndb.com/jokes/random');
-}
+}*/
 
 //Using a Promise with an object as Parameter
 function sendRequest(conf) {
@@ -41,14 +50,9 @@ function sendRequest(conf) {
     });
 }
 
-var responseElement = document.getElementById('spanResponse');
-var btnClick = document.querySelector('.btnClick');
-
-btnClick.addEventListener('click',receiveJoke);
-
-function receiveJoke(){
+function receiveJoke() {
   sendRequest({url:'http://api.icndb.com/jokes/random'}).then(function(response) {
-    jSONResponse =JSON.parse(response);
+    var jSONResponse =JSON.parse(response);
     responseElement.innerHTML = jSONResponse.value.joke;
   },function(error) {
     responseElement.style = "color: red;";
@@ -56,13 +60,24 @@ function receiveJoke(){
   });
 }
 
-function receiveQ(){
-  sendRequest({url:"https://api.github.com/search/repositories?q='JavaScript'"}).then(function(response) {
-    jSONResponse =JSON.parse(response);
-    console.log(response);
+function receiveQ() {
+  var url = "https://api.github.com/search/repositories?q='q=" + txtSearch.value + "'";
+  sendRequest({url:url}).then(function(response) {
+    var jSONResponse =JSON.parse(response);
+    publishResults(jSONResponse);
   },function(error) {
     console.error();
   });
+}
+
+function publishResults(response) {
+  var length = response.items.length;
+  var items = [];
+  for(i=0; i<length; i++) {
+    items.push(response.items[i].full_name);
+  }
+  var names = '<ul><li>' + items.join('</li><li>') + '</li></ul>';
+  ulResults.innerHTML = names;
 }
 
 receiveJoke();
