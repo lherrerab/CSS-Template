@@ -7,6 +7,7 @@ var txtSearch = document.querySelector('.txtSearch');
 btnClick.addEventListener('click',receiveJoke);
 btnSearch.addEventListener('click',receiveQ);
 
+
 //XMLHttpRequest to receive the Joke (used previously)
 /*function receiveMessage(url){
   var xmlRequest = new XMLHttpRequest();
@@ -73,7 +74,7 @@ function receiveQ() {
 function publishResults(response) {
   var length = response.items.length;
   var items = [];
-  for(i=0; i<length; i++) {
+  for(i = 0; i < length; i++) {
     items.push(response.items[i].full_name);
   }
   var names = '<ul><li>' + items.join('</li><li>') + '</li></ul>';
@@ -81,3 +82,32 @@ function publishResults(response) {
 }
 
 receiveJoke();
+
+//EXERCISE 12
+var matrix = [
+  [['TITLE'],['GENRE'],['IMDB'],['YEAR']],
+  [['The Shawshank Redemption'],['Crime/Drama'],['9,2'],['1994']],
+  [['The Godfather'],['Crime/Drama'],['9,2'],['1972']],
+  [['The Godfather II'],['Crime/Drama'],['9,0'],['1974']],
+  [['The Dark Knight'],['Action'],['9,0'],['2008']],
+  [['Schindlers List'],['Drama'],['8,9'],['1993']],
+  [['Inception'],['Sci-Fi'],['8,8'],['2010']]
+];
+
+var divTable = document.querySelector('.divTable');
+var table = document.createElement("table");
+var tr;
+var td;
+var text;
+
+for(i = 0; i < matrix.length; i++) {
+  tr = document.createElement("tr");
+  for(j = 0; j < matrix[i].length; j++) {
+    td = document.createElement("td");
+    text = document.createTextNode(matrix[i][j]);
+    td.appendChild(text);
+    tr.appendChild(td);
+  }
+  table.appendChild(tr);
+}
+divTable.appendChild(table);

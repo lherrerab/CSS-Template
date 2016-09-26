@@ -77,3 +77,13 @@ section div {
   -ms-transition: opacity 2s ease-in;
   transition: opacity 2s ease-in;
 }
+
+table {
+  font-size: 1vw;
+  text-align: left !important;
+  margin: auto;
+}
+
+td {
+  padding: 1vw;
+}
