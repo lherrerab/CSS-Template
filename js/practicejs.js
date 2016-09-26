@@ -1,4 +1,4 @@
-var responseElement = document.getElementById('spanResponse');
+var responseElement = document.querySelector('.spanResponse');
 var btnClick = document.querySelector('.btnClick');
 var btnSearch = document.querySelector('.btnSearch');
 var ulResults = document.querySelector('.ulResults');
