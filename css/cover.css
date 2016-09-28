@@ -26,7 +26,6 @@ section {
   height: 75%;
   width: 100%;
   position: relative;
-  overflow: hidden;
 }
 
 footer {
@@ -56,12 +55,17 @@ footer>img {
 .headerTopDiv {
   background-color:#e3001c;
   width:100%;
-  height:20%
+  height:20%;
+  position:relative;
 }
 
 .headerTitle {
   display:inline-block;
-  margin: 0.5em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 100%;
 }
 
 .headerLogoWii {
@@ -140,6 +144,7 @@ footer>img {
   left:0.6em;
   position: relative;
   padding-top: 1em;
+  width: 80%;
 }
 
 .tCoverBlue {
@@ -191,6 +196,15 @@ footer>img {
   left: -7vw;
   padding-top: 0.2em;
   padding-bottom: 0.3em;
+}
+
+.back {
+  width: 100%;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  overflow: hidden;
 }
 
 .backDiv {
