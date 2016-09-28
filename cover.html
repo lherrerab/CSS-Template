@@ -7,29 +7,69 @@
   <title>CSS Template</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/cover.css">
+  <link href="https://fonts.googleapis.com/css?family=Finger+Paint" rel="stylesheet">
 </head>
 <body>
   <div class="container">
     <header class="header">
-      <div style="background-color:red; width:100%;height:20%">
+      <div style="background-color:#e3001c; width:100%;height:20%">
         <div style="display:inline-block;  margin: 0.5em;">
-          <span style="display:inline-block">
+          <span class="headerText">
             REVISTA OFICIAL NINTENDO
           </span>
           <img src="img/wii.png" style="display:inline-block; width:2em;height: 0.8em;"/>
           <img src="img/Nintendo_3DS_logo.png" style="display:inline-block; width:2em;height: 0.8em;"/>
         </div>
       </div>
-      <div style="background-color:green;height:80%;position:relative;">
+      <div style="background-color:#e3001c;height:80%;position:relative;">
         <img src="img/Logo_Nintendo.png" style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
       </div>
     </header>
-    <section style="overflow:hidden;">
-      <img src="img/mario.jpg" style="width:118%;right:-67px;height:100%;">
-      <span>LEO</span>
+    <section>
+      <img src="img/mario.png" class="mainCover">
+      <div style="position:absolute;top:0;width: 100%;">
+        <div style="width:100%;">
+          <div style="display:inline-block;top:-0.6em;left: -0.5em;position:relative;">
+            <img src="img/Barkley.png" style="height: 17vw;"/>
+          </div>
+          <div style="display:inline-block;vertical-align: top;padding-top: 1.5em;left: -1em;position: relative;">
+            <span class="tCoverBlue">SKYLANDERS<br>TRAP TEAM</span><br>
+            <span class="tCoverBlack">Ahora los villanos<br>serán protagonistas</span>
+          </div>
+        </div>
+        <div style="left:0.6em; position: relative;">
+          <span class="tCoverBlue">DISNEY<br>INFINITY 2.0</span><br>
+          <span class="tCoverBlack">Con los héroes Marvel</span>
+        </div>
+        <div style="left:0.6em; position: relative;padding-top: 1em;">
+          <span class="tCoverBlue">BAYONETTA 2</span><br>
+          <span class="tCoverBlack">¡A las armas en Wii U!</span>
+        </div>
+        <div style="left:0.6em; position: relative;padding-top: 1em;">
+          <img src="img/barcode.png"/><br>
+          <span>Canarias 3,65 €</span>
+        </div>
+        <div style="left:0.6em; position: relative;padding-top: 1em;">
+          <span class="tCoverBlackL">¡EL <b>ANÁLISIS</b><br>MÁS COMPLETO!</span><br>
+          <span class="tCoverXXL">SUPER<br>SMASH BROS.<br>PARA 3DS</span><br>
+          <span class="tCoverXL">El combate<br>del siglo</span><br>
+        </div>
+      </div>
+      <div class="backDiv">
+        <div class="backDivIn">
+        </div>
+      </div>
+      <div class="backText">
+        <span style="font-size: 3vw;">AVANCE</span><br>
+        <span style="color: red;font-weight: 900;font-size: 3.5vw;line-height: 3.0vw;-webkit-transform: scale(0.8,1.2);display: inline-block;right: -3vw;position: relative;padding-top:0.5vw;padding-bottom:1.5vw;">
+          <b>POKÉMON<br>RUBÍ OMEGA Y<br>ZAFIRO ALFA</b>
+        </span><br>
+        <span style="font-size: 3vw;line-height: 2vw;">Y no te pierdas<br>el <span style="font-weight:bolder;"><b>nuevo pack<br>Pokémon 2DS</b></span></span>
+      </div>
     </section>
     <footer>
-      <span>GRATIS POSTER DOBLE</span>
+      <p style="margin:0;font-size:4vw;padding-left:2vw;font-style: italic;font-family:'Finger Paint',cursive;color:white;position: absolute;"><span style="color:yellow;">GRATIS</span> PÓSTER DOBLE</p>
+      <img src="img/posters.png" style="right:0;position:absolute;bottom: 0;width: 50%;" />
     </footer>
   </div>
 </body>

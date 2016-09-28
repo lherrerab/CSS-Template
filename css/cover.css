@@ -25,9 +25,17 @@ header>div>img {
 section {
   height: 75%;
   width: 100%;
+  position: relative;
 }
 
-span {
+footer {
+  height: 5%;
+  width: 100%;
+  background-color: #e3001c;
+  position: relative;
+}
+
+.headerText {
   height: 100%;
   font-size: 0.8em;
   position: relative;
@@ -37,45 +45,97 @@ span {
   margin: 0;
 }
 
-footer {
-  height: 5%;
-  width: 100%;
-  background-color: red;
-}
-
 .container {
  height: 100%;
 }
 
-
-
-
-
-
-
-
-.spanArrow {
-  width: 100%;
-  height: 100%;
-  background-color: red;
-  border: 1px solid red;
-  position: relative;
-  color: yellow;
-  font-weight: bold;
-  font-family: sans-serif;
-  margin: 0;
+.mainCover {
+  width:100%;
+  height:100%;
+  z-index: 10;
 }
 
-.spanArrow:before {
-  content: '';
+.tCoverBlue {
+  color: #0096ff;
+  font-weight: bold;
+  font-size: 4vw;
+  display: inline-block;
+  line-height: 3.5vw;
+  vertical-align: top;
+}
+
+.tCoverBlack {
+  color: black;
+  font-size: 3vw;
+  display: inline-block;
+  line-height: 2.5vw;
+  vertical-align: top;
+}
+
+.tCoverBlackL {
+  color: black;
+  font-size: 3.5vw;
+  display: inline-block;
+  line-height: 3vw;
+  font-weight: bolder;
+}
+
+.tCoverXL {
+  color: black;
+  font-size: 8vw;
+  line-height: 6.5vw;
+  font-weight: 900;
+  -webkit-transform: scale(0.8,1.2);
+  display: inline-block;
+  padding-top: 1vw;
+  left: -5vw;
+  position: relative;
+}
+
+.tCoverXXL {
+  color: #e3001c;
+  font-size: 9vw;
+  display: inline-block;
+  line-height: 7.5vw;
+  font-weight: 900;
+  transform: scale(0.8,1.2);
+  -webkit-transform: scale(0.8,1.2);
+  position: relative;;
+  left: -7vw;
+  padding-top: 0.2em;
+  padding-bottom: 0.3em;
+}
+
+.backDiv {
   position: absolute;
-  top: 0px;
-  left: 101%;
-  width: 0;
-  height: 0;
-  border: solid transparent;
-  border-left: 0.5em solid red;
-  border-right-width: 0.5em;
-  border-top-width: 0.5em;
-  border-bottom-width: 0.5em;
+  top: 1vw;
+  right: -10%;
+  background-color: white;
+  width: 43%;
+  height: 41%;
+  border-radius: 50%;
+  z-index: -1;
+  border-style: solid;
+  border-color: #fec63e;
+}
+
+.backDivIn {
+  background-color: #fec63e;
+  width: 96%;
+  height: 96%;
+  border-radius: 50%;
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.backText {
+  text-align: right;
+  padding-right: 2vw;
+  padding-top: 4vw;
+  position: absolute;
+  top: 0;
+  right: 0;  
 }
