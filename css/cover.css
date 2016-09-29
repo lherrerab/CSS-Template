@@ -1,150 +1,87 @@
-* {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-html,body{
-  margin:0px;
-  height:100%;
-  width: 100%
- }
-
+/***HEADER CSS***/
 header {
   text-align: center;
   height: 20%;
   width: 100%;
 }
 
-header>div>img {
-  width: 80%;
-  max-height: 80%;
-  min-height: 80%;
-}
-
-section {
-  height: 75%;
-  width: 100%;
-  position: relative;
-}
-
-footer {
-  height: 5%;
-  width: 100%;
-  background-color: #e3001c;
-  position: relative;
-}
-
-footer>p {
-  margin:0;
-  font-size:4vw;
-  padding-left:2vw;
-  font-style: italic;
-  font-family:'Finger Paint',cursive;
-  color:white;
-  position: absolute;
-}
-
-footer>img {
-  right:0;
-  position:absolute;
-  bottom: 0;
-  width: 50%;
-}
-
 .headerTopDiv {
   background-color:#e3001c;
   width:100%;
-  height:20%;
   position:relative;
-}
-
-.headerTitle {
-  display:inline-block;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  width: 100%;
-}
-
-.headerLogoWii {
-  display:inline-block;
-  width:2em;
-  height: 1em;
-}
-
-.headerLogoNintendo {
-  display:inline-block;
-  width:8em;
-  height: 1em;
-}
-
-.headerDivBanner {
-  background-color:#e3001c;
-  height:80%;
-  position:relative;
-}
-
-.headerBanner {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .headerText {
   height: 100%;
-  font-size: 1.5em;
-  position: relative;
+  font-size: 3vw;
   color: white;
   font-family: sans-serif;
-  margin: 0;
-  -webkit-transform: scale(1.2,1);
+  -webkit-transform: scale(1.2,1.2);
   display: inline-block;
-  padding-right: 5vw;
+  padding: 1vw 0 1vw 0;
 }
 
-.container {
- height: 100%;
+.headerLogoWii {
+  display:inline-block;
+  height: 2.8vw;
+}
+
+.headerLogoNintendo {
+  display:inline-block;
+  width: 12vw;
+  height: 3vw;
+}
+
+.headerDivBanner {
+  background-color:#e3001c;
+  text-align: center;
+}
+
+.headerBanner {
+  width: 90%;
+  padding: 1vw 0 3vw 0;
+}
+
+/***SECTION CSS***/
+section {
+  position: relative;
 }
 
 .mainCover {
   width:100%;
   height:100%;
-  z-index: 10;
+  z-index: -1;
+  position: absolute;
 }
 
 .divTopLayer {
-  position:absolute;
-  top:0;
   width: 100%;
+  height: 100%;
+}
+
+.divNews {
+  left:2vw;
+  position: relative;
+  width: 80%;
+  font-size: 1vw;
 }
 
 .divBarkley {
   display:inline-block;
-  top:-0.6em;
-  left: -0.5em;
+  top:-2vw;
+  left: -3vw;
   position:relative;
+  vertical-align: bottom;
 }
 
 .divBarkley>img {
   height: 17vw;
+  vertical-align: bottom;
 }
 
 .divTextBarkley {
   display:inline-block;
-  vertical-align: top;
-  padding-top: 1.5em;
-  left: -1em;
-  position: relative;
-}
-
-.divNews {
-  left:0.6em;
-  position: relative;
-  padding-top: 1em;
-  width: 80%;
+  vertical-align: bottom;
 }
 
 .tCoverBlue {
@@ -172,18 +109,6 @@ footer>img {
   font-weight: bolder;
 }
 
-.tCoverXL {
-  color: black;
-  font-size: 8vw;
-  line-height: 6.5vw;
-  font-weight: 900;
-  -webkit-transform: scale(0.8,1.2);
-  display: inline-block;
-  padding-top: 1vw;
-  left: -5vw;
-  position: relative;
-}
-
 .tCoverXXL {
   color: #e3001c;
   font-size: 9vw;
@@ -198,6 +123,27 @@ footer>img {
   padding-bottom: 0.3em;
 }
 
+.tCoverXL {
+  color: black;
+  font-size: 8vw;
+  line-height: 6.5vw;
+  font-weight: 900;
+  -webkit-transform: scale(0.8,1.2);
+  display: inline-block;
+  padding-top: 1vw;
+  left: -5vw;
+  position: relative;
+  padding-bottom: 4vw;
+}
+
+.padTop {
+  padding-top: 2vw;
+}
+
+.barcode {
+  width: 20vw;
+}
+
 .back {
   width: 100%;
   display: inline-block;
@@ -205,6 +151,7 @@ footer>img {
   top: 0;
   height: 100%;
   overflow: hidden;
+  z-index: -2;
 }
 
 .backDiv {
@@ -212,8 +159,8 @@ footer>img {
   top: 1vw;
   right: -10%;
   background-color: white;
-  width: 43%;
-  height: 41%;
+  width: 40%;
+  height: 40%;
   border-radius: 50%;
   z-index: -1;
   border-style: solid;
@@ -242,7 +189,8 @@ footer>img {
 }
 
 .backText>img {
-  width:23%;
+  width: 21vw;
+  height: 11.8vw;
 }
 
 .backTextS {
@@ -265,4 +213,26 @@ footer>img {
   position: relative;
   padding-top:0.5vw;
   padding-bottom:1.5vw;
+}
+/***FOOTER CSS***/
+footer {
+  width: 100%;
+  background-color: #e3001c;
+  position: relative;
+}
+
+footer>p {
+  margin:0;
+  font-size:3.8vw;
+  padding-left:2vw;
+  font-style: italic;
+  font-family:'Finger Paint',cursive;
+  color:white;
+}
+
+footer>img {
+  right:0;
+  bottom: 0;
+  width: 50%;
+  position: absolute;
 }
