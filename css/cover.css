@@ -5,13 +5,7 @@ header {
   width: 100%;
 }
 
-.headerTopDiv {
-  background-color:#e3001c;
-  width:100%;
-  position:relative;
-}
-
-.headerText {
+h1 {
   height: 100%;
   font-size: 3vw;
   color: white;
@@ -19,6 +13,13 @@ header {
   -webkit-transform: scale(1.2,1.2);
   display: inline-block;
   padding: 1vw 0 1vw 0;
+  margin: 0;
+}
+
+.headerTopDiv {
+  background-color:#e3001c;
+  width:100%;
+  position:relative;
 }
 
 .headerLogoWii {
@@ -45,6 +46,10 @@ header {
 /***SECTION CSS***/
 section {
   position: relative;
+}
+
+section p {
+  margin: 0;
 }
 
 .mainCover {
@@ -91,6 +96,7 @@ section {
   display: inline-block;
   line-height: 3.5vw;
   vertical-align: top;
+  margin: 0;
 }
 
 .tCoverBlack {
@@ -121,6 +127,7 @@ section {
   left: -7vw;
   padding-top: 0.2em;
   padding-bottom: 0.3em;
+  margin: 0;
 }
 
 .tCoverXL {
@@ -196,6 +203,7 @@ section {
 .backTextS {
   font-size: 3vw;
   line-height: 3vw;
+  display: inline-block;
 }
 
 .backTextS>span {
