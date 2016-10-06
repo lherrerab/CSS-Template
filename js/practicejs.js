@@ -3,10 +3,15 @@ var btnClick = document.querySelector('.btnClick');
 var btnSearch = document.querySelector('.btnSearch');
 var ulResults = document.querySelector('.ulResults');
 var txtSearch = document.querySelector('.txtSearch');
+var form = document.querySelector('.form');
 
 btnClick.addEventListener('click',receiveJoke);
 btnSearch.addEventListener('click',receiveQ);
 
+form.addEventListener('submit',function(event){
+  event.preventDefault();
+  receiveQ();
+});
 
 //XMLHttpRequest to receive the Joke (used previously)
 /*function receiveMessage(url){
