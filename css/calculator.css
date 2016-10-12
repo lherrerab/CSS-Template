@@ -18,12 +18,18 @@ td,input {
                                   not supported by any browser */
 }
 
+.tdBtn {
+  width: 25%;
+}
+
 .button {
   text-align: center;
   padding: 2vw;
-  width: 25%;
+  width: 100%;
   font-size: 1.5vw;
   cursor: default;
+  border: 0;
+  background-color: #008ED4;
 }
 
 .button:hover {

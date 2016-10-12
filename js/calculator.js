@@ -1,5 +1,5 @@
-let digits = ['0','1','2','3','4','5','6','7','8','9','.'];
-let operators = ['+','-','x','÷'];
+var digits = ['0','1','2','3','4','5','6','7','8','9','.'];
+var operators = ['+','-','x','÷'];
 var buttons = document.querySelectorAll('.button');
 var display = document.querySelector('.display');
 var numberExtra;
@@ -11,13 +11,12 @@ for(i=0; i<buttons.length; i++) {
   buttons[i].addEventListener('click', buttonPressed);
 }
 
-function buttonPressed() {
-  var value = this.innerHTML;
+function buttonPressed(event) {
+  var value = event.target.value;
   if(digits.includes(value)) {
     inNumber(value);
   }
   else if(operators.includes(value)) {
-    console.log(value);
     flagOperation = true;
     flagDecimal = false;
     operation = value;
