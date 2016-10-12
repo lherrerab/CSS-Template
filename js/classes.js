@@ -9,10 +9,6 @@ class EventEmitter {
     this.listeners.get(label).push(callback);
   }
 
-  let isFunction = function(obj) {
-    return typeof obj == 'function' || false;
-  };
-
   off(label, callback) {
     let listeners = this.listeners.get(label);
     let index;
@@ -46,7 +42,7 @@ class EventEmitter {
   }
 }
 
-class Observer {
+/*class Observer {
   constructor(id, subject) {
     this.id = id;
     this.subject = subject;
@@ -55,36 +51,45 @@ class Observer {
   onChange(data) {
     console.log(`${this.id} notified of change:`, data);
   }
-}
+}*/
 
-class Movie {
+class Movie extends EventEmitter {
   constructor(title, year, duration) {
+    super();
     this.title = title;
     this.year = year;
     this.duration = duration;
   }
-
   getTitle() {
     console.log(this.title);
   }
-
   getYear() {
     console.log(this.year);
   }
-
   getDuration() {
     console.log(this.duration);
   }
-
   play() {
     console.log("play");
   }
-
   pause() {
     console.log("pause");
   }
-
   resume() {
     console.log("resume");
+  }
+}
+
+class Logger {
+  constructor() {
+    //this..on("play", (data) => this.log(info));
+  }
+  setMovie(movie) {
+    this.movie = movie;
+    this.movie.on("play", (info) => this.onChange(info));
+  }
+
+  log(info) {
+    console.log(info);
   }
 }
