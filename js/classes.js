@@ -1,20 +1,35 @@
-import { EventEmitter } from 'events');
-
-// Factory shared
-var makePerson = function() {
-  let person = {};
-  EventEmitter.call(person);
-  person.wallet = 0;
-  Object.assign(person, personMethods)
-  return person;
+class event extends EventEmitter {
+  
 }
-let personMethods = {};
-Object.assign(personMethods, EventEmitter.prototype)
 
-personMethods.talk = function() {
+class Movie {
+  constructor(title, year, duration) {
+    this.title = title;
+    this.year = year;
+    this.duration = duration;
+  }
 
-};
+  getTitle() {
+    console.log(this.title);
+  }
 
-let person = makePerson();
-person.talk();
-ou
+  getYear() {
+    console.log(this.year);
+  }
+
+  getDuration() {
+    console.log(this.duration);
+  }
+
+  play() {
+    console.log("play");
+  }
+
+  pause() {
+    console.log("pause");
+  }
+
+  resume() {
+    console.log("resume");
+  }
+}
