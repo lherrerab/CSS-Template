@@ -29,7 +29,7 @@ function buttonPressed() {
   else if(value === '=') {
     showResult();
   }
-  else if(value === 'Back') {
+  else if(value === '←') {
     removeDigit();
   }
   else if(value === 'CE') {
